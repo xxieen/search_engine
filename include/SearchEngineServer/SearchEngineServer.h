@@ -8,7 +8,7 @@
 #include "Configuration.h"
 class SearchEngineServer {
 public:
-  SearchEngineServer(map<string, string> &cofig);
+  SearchEngineServer(map<string, string> &config);
 
   void start();
 

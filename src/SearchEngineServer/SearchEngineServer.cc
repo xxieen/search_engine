@@ -1,6 +1,5 @@
 #include "../../include/SearchEngineServer/SearchEngineServer.h"
 #include "../../include/Cache/CacheManager.h"
-#include "../../include/SearchEngineServer/Mytask.h"
 
 SearchEngineServer::SearchEngineServer(map<string, string> &config)
     : _threadpool(atoi((config["threads_num"]).c_str()),
