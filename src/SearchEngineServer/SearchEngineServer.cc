@@ -3,7 +3,7 @@
 
 SearchEngineServer::SearchEngineServer(map<string, string> &config)
     : _threadpool(atoi((config["threads_num"]).c_str()),
-                  atoi((config["server_port"]).c_str())),
+                  atoi((config["server_port"]).c_str())), // ????
       _tcpserver(config["server_ip"], atoi((config["server_port"]).c_str())) {}
 
 void SearchEngineServer::start() {
@@ -50,7 +50,7 @@ void SearchEngineServer::doTaskThread(const TcpConnectionPtr &conn,
 
   json recvj = ProtocolParser::doParse(msg);
   json sendj;
-  vector<string> vec;
+  // vector<string> vec; ?????
   switch ((int)(recvj["cmd"])) {
   case KeyRecommand: {
     KeyRecommander _keyrecommander(recvj["word"]);

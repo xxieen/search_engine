@@ -21,7 +21,6 @@ public:
         if (lhs._word < rhs._word) // a的优先级高于b
         {
           return false;
-
         } else {
           return true;
         }

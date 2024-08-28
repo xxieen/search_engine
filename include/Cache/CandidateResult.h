@@ -3,9 +3,9 @@
 #include "../myhead.h"
 
 struct CandidateResult {
-    string _word;
-    int _freq;
-    int _dist;
+  string _word;
+  int _freq;
+  int _dist;
 };
 
 #endif //_CANDIDATERESULT_H

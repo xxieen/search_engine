@@ -83,7 +83,7 @@ void DictProducer::buildCnDict() {
   }
 }
 
-void DictProducer::createIndex() { // 创建反向索引
+void DictProducer::createIndex() { // 创建索引表
   string letter;
   int index = 0; // 用于追踪当前处理的单词的索引
 
@@ -156,7 +156,7 @@ void DictProducer::storeDict(const char *path) {
   wfile.close();
 }
 
-// 将生成好的反向索引表存放在对应的文件目录下
+// 将生成好的索引表存放在对应的文件目录下
 void DictProducer::storeIndex(const char *path) {
   ofstream wfile(path);
   if (!wfile.good()) {
